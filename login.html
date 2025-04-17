@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    function validateLogin(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get input values
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+
+      // Check credentials
+      if ((email === "vee@gmail.com" && password === "111") || 
+          (email === "vee2@gmail.com" && password === "222")) {
+        window.location.href = "index.html"; // Redirect to the next page
+      } else {
+        alert("Invalid email or password. Please try again.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <form onsubmit="validateLogin(event)">
+      <h2>Login</h2>
+      <div class="input-field">
+        <input type="text" id="email" required>
+        <label>Enter your email</label>
+      </div>
+      <div class="input-field">
+        <input type="password" id="password" required>
+        <label>Enter your password</label>
+      </div>
+      <div class="forget">
+        <a href="#">Forgot password?</a>
+      </div>
+      <button type="submit">Log In</button>
+      <div class="register">
+        <p>Don't have an account? <a href="https://www.sunderlandsu.co.uk/groups/myanmar-society-uos">Register</a></p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
